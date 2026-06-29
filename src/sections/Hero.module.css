@@ -1,0 +1,197 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.glow {
+  position: absolute;
+  top: 10%; left: 30%;
+  width: 600px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(232,168,76,0.08) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulse 6s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { transform: scale(1) translateY(0); opacity: 1; }
+  50%      { transform: scale(1.1) translateY(-20px); opacity: 0.7; }
+}
+.inner {
+  padding-top: 60px; padding-bottom: 80px;
+  width: 100%;
+}
+
+/* ── entrance animations ── */
+.topbar, .headline, .subRow, .stats {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.topbar.in  { opacity: 1; transform: none; transition-delay: 0.1s; }
+.headline.in{ opacity: 1; transform: none; transition-delay: 0.3s; }
+.subRow.in  { opacity: 1; transform: none; transition-delay: 0.55s; }
+.stats.in   { opacity: 1; transform: none; transition-delay: 0.75s; }
+
+/* ── top bar ── */
+.topbar {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 48px;
+}
+.statusDot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%,100% { opacity: 1; } 50% { opacity: 0.3; }
+}
+.statusText {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-dim);
+}
+.rule {
+  flex: 1; height: 1px; background: var(--border);
+}
+.edition {
+  font-size: 11px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-mute);
+}
+
+/* ── headline ── */
+.headline {
+  font-family: var(--serif);
+  font-size: clamp(52px, 8.5vw, 120px);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin-bottom: 48px;
+}
+
+/* ── "quiet" — gradient text + scrambles on hover ── */
+.quietWord {
+  font-style: italic;
+  background: linear-gradient(
+    135deg,
+    var(--accent) 0%,
+    #e8c89a 40%,
+    #f0ebe3 65%,
+    var(--accent) 100%
+  );
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: emberShift 5s ease-in-out infinite;
+  /* keep monospace width during scramble so line doesn't jump */
+  font-variant-numeric: tabular-nums;
+}
+@keyframes emberShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ── "loud" — wavy SVG underline that draws in ── */
+.loudWord {
+  position: relative;
+  display: inline-block;
+}
+.wavyLine {
+  position: absolute;
+  left: 0;
+  bottom: -0.08em;
+  width: 100%;
+  height: 0.18em;
+  overflow: visible;
+  pointer-events: none;
+}
+/* the path starts hidden (dashoffset=300 set inline) */
+/* when .wavyDraw is added, we animate to dashoffset=0 */
+.wavyDraw {
+  animation: drawWavy 1.6s 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes drawWavy {
+  from { stroke-dashoffset: 300; }
+  to   { stroke-dashoffset: 0; }
+}
+
+/* ── sub row ── */
+.subRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+.bio {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dim);
+  max-width: 460px;
+}
+.actions {
+  display: flex; gap: 12px; justify-content: flex-end;
+}
+.btnOutline, .btnFilled {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 11px 22px;
+  border-radius: 99px;
+  font-size: 14px; font-weight: 500;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.btnOutline {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btnOutline:hover { background: var(--bg3); transform: translateY(-2px); }
+.btnFilled {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btnFilled:hover { background: var(--surface); transform: translateY(-2px); }
+
+/* ── stats ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.stat {
+  padding: 28px 32px;
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.stat:last-child { border-right: none; }
+.statValue {
+  font-family: var(--serif);
+  font-size: 36px;
+  color: var(--text);
+  line-height: 1;
+}
+.statLabel {
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-mute);
+}
+
+@media (max-width: 900px) {
+  .subRow { grid-template-columns: 1fr; }
+  .actions { justify-content: flex-start; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3) { border-top: 1px solid var(--border); }
+  .stat:nth-child(4) { border-top: 1px solid var(--border); border-right: none; }
+}
+@media (max-width: 500px) {
+  .headline { font-size: 42px; }
+}

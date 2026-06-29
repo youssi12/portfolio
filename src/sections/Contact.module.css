@@ -1,0 +1,52 @@
+.contact { background: var(--bg); }
+.inner {
+  text-align: center;
+  max-width: 760px; margin: 0 auto;
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.inner.in { opacity: 1; transform: none; }
+
+.headline {
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 1.08;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+.accentLine {
+  font-style: italic;
+  color: var(--accent);
+}
+.cursor {
+  display: inline-block;
+  animation: blink 0.8s step-end infinite;
+  color: var(--accent);
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+.sub {
+  font-size: 16px; color: var(--text-dim); line-height: 1.65;
+  max-width: 540px; margin: 0 auto 48px;
+}
+.actions {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.emailBtn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px;
+  background: var(--accent); color: var(--bg);
+  border-radius: 99px;
+  font-size: 14px; font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+}
+.emailBtn:hover { background: var(--accent2); transform: translateY(-2px); }
+.iconBtn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 24px;
+  background: var(--surface); color: var(--text-dim);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  font-size: 14px;
+  transition: color 0.2s, transform 0.2s, background 0.2s;
+}
+.iconBtn:hover { color: var(--text); background: var(--bg3); transform: translateY(-2px); }

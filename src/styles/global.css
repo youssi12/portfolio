@@ -1,0 +1,65 @@
+/* ── Reset & tokens ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d0c0b;
+  --bg2:       #161412;
+  --bg3:       #1e1b17;
+  --surface:   #232018;
+  --border:    rgba(255,255,255,0.07);
+  --accent:    #e8a84c;
+  --accent2:   #c47a2e;
+  --text:      #f0ebe3;
+  --text-dim:  rgba(240,235,227,0.55);
+  --text-mute: rgba(240,235,227,0.25);
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'DM Sans', system-ui, sans-serif;
+  --radius:    12px;
+  --radius-lg: 20px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+a { color: inherit; text-decoration: none; }
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface); border-radius: 99px; }
+
+/* ── Utilities ──────────────────────────────────────────── */
+.section { padding: 120px 0; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.eyebrow::before { content: '§'; }
+
+/* ── Display headings ───────────────────────────────────── */
+.display {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+.italic-accent { font-style: italic; color: var(--accent); }

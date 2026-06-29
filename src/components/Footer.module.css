@@ -1,0 +1,21 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+}
+.inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-mute);
+}
+.prompt { color: var(--accent); margin-right: 6px; }
+.center { color: var(--text-mute); }
+.right {
+  color: var(--text-mute); cursor: pointer;
+  transition: color 0.2s;
+}
+.right:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+  .center { display: none; }
+}
