@@ -14,7 +14,7 @@
   // ── Stats bar ───────────────────────────────────────────
   stats: [
     { value: "03+", label: "Years Coding" },
-    { value: "07",  label: "Shipped Projects" },
+    { value: "05",  label: "Shipped Projects" },
     { value: "∞",   label: "Cups of Coffee" },
     { value: "100%", label: "Curiosity" },
   ],
@@ -72,7 +72,7 @@
       description:
         "Double-entry bookkeeping, done properly. Every transaction debits one account and credits another — no shortcuts. Idempotency keys stop duplicates on retries, every action writes to an audit log, and the whole thing exports to CSV on demand. Built to outlive whatever frontend points at it.",
       tags: ["Node.js", "SQLite", "Express"],
-      caseStudyUrl: "#",
+      caseStudyUrl: "https://ledger-minimalist-finance.netlify.app/",
       sourceUrl: "https://github.com/youssi12/Ledger",
       visual: "green",
     },
@@ -183,9 +183,7 @@
       description:
         "I read the codebase as it actually is, find what's going to cause problems, and fix it quietly. No rewrites for the sake of rewrites.",
     },
-  ],
-
-  // ── Contact section ──────────────────────────────────────
+  ], 
   contact: {
     headline: ["Have something", "worth building?", "Let's talk."],
     sub: "A quiet API, a stubborn database problem, or a full product from scratch — send a note. I read everything and reply to all of it.",
