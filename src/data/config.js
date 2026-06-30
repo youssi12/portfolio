@@ -153,7 +153,7 @@
     {
       year: "2026",
       title: "Full-stack, start to finish",
-      text: "Shipped a complete system on my own — frontend, backend, database. The kind of project where you're responsible for every layer and there's nobody else to blame when something breaks at 2am.",
+      text: "Shipped a complete system on my own: rontend, backend, database. The kind of project where you're responsible for every layer and there's nobody else to blame when something breaks at 2am.",
     },
   ],
 
