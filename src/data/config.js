@@ -72,19 +72,19 @@
       description:
         "Double-entry bookkeeping, done properly. Every transaction debits one account and credits another — no shortcuts. Idempotency keys stop duplicates on retries, every action writes to an audit log, and the whole thing exports to CSV on demand. Built to outlive whatever frontend points at it.",
       tags: ["Node.js", "SQLite", "Express"],
-      // caseStudyUrl: "https://ledger-minimalist-finance.netlify.app/",
-      // sourceUrl: "https://github.com/youssi12/Ledger",
+      caseStudyUrl: "https://ledger-minimalist-finance.netlify.app/",
+      sourceUrl: "https://github.com/youssi12/Ledger",
       visual: "green",
     },
     {
       id: "002",
       year: "2025",
-      title: "ConcoursDoctor ",
+      title: "ConcoursDoctor — in development",
       description:
-        "A team project at ESI-SBA. We built the platform that manages doctoral competition applications end to end.",
+        "A team project at ESI-SBA. We built the platform that manages doctoral competition applications end to end. I owned the backend: API design, database schema, the Prisma layer connecting everything to MySQL. Working on a shared codebase under real deadlines teaches you things solo projects don't.",
       tags: ["Node.js", "Express.js", "Prisma", "MySQL"],
-      // caseStudyUrl: "#",
-      // sourceUrl: "https://github.com/samiabelhadj/Back-end-concour",
+      caseStudyUrl: "#",
+      sourceUrl: "https://github.com/samiabelhadj/Back-end-concour",
       visual: "purple",
     },
     {
@@ -94,8 +94,8 @@
       description:
         "The interesting part wasn't the CRUD — it was fitting Dijkstra and A* into a system with real constraints: vehicle capacity, deadlines, multi-stop ordering. Redis caches repeated route queries so nothing recomputes from scratch. MySQL keeps fleet and order state across sessions.",
       tags: ["Express", "TypeScript", "MySQL", "React", "Graph Algorithms"],
-      // caseStudyUrl: "https://routeopt-optimizer.netlify.app/",
-      // sourceUrl: "https://github.com/youssi12/Routeopt",
+      caseStudyUrl: "https://routeopt-optimizer.netlify.app/",
+      sourceUrl: "https://github.com/youssi12/Routeopt",
       visual: "orange",
     },
     {
@@ -105,8 +105,8 @@
       description:
         "A clean frontend project — search, browse, save. Good exercise in thinking purely in components and keeping state from turning into a mess. Nothing groundbreaking, but everything works exactly the way it should.",
       tags: ["React", "JavaScript", "Tailwind"],
-      // caseStudyUrl: "https://movie-app-netify.netlify.app/",
-      // sourceUrl: "https://github.com/youssi12/MovieApp",
+      caseStudyUrl: "https://movie-app-netify.netlify.app/",
+      sourceUrl: "https://github.com/youssi12/MovieApp",
       visual: "blue",
     },
     {
@@ -116,8 +116,8 @@
       description:
         "A bakery storefront — warm, unhurried, a little indulgent. First project where I really thought about how a site should feel, not just what it should do.",
       tags: ["React", "Tailwind"],
-      // caseStudyUrl: "https://yousra-sweet-crumbs.netlify.app",
-      // sourceUrl: "https://github.com/youssi12/sweet-crumbs",
+      caseStudyUrl: "https://yousra-sweet-crumbs.netlify.app",
+      sourceUrl: "https://github.com/youssi12/sweet-crumbs",
       visual: "pink",
     },
     {
@@ -127,30 +127,8 @@
       description:
         "A restaurant site built to feel like the place itself: unhurried, considered, a bit atmospheric. Focused on getting the typography and spacing right so the food could do the talking.",
       tags: ["React", "Tailwind"],
-      // caseStudyUrl: "https://lambre.netlify.app/",
-      // sourceUrl: "https://github.com/youssi12/Restaurant",
-      visual: "green",
-    },
-    {
-      id: "007",
-      year: "2026",
-      title: "Oulamaouna",
-      description:
-        " a wekipidia-esque platform where you learn about the rich history of islamic scholars,brows creta shcolars ,add emfi refrnces and talks about relevant topic iwth midnd peopel ",
-      tags: ["React", "express"],
-      // caseStudyUrl: "https://lambre.netlify.app/",
-      // sourceUrl: "https://github.com/youssi12/Restaurant",
-      visual: "green",
-    },
-   {
-      id: "008",
-      year: "2026",
-      title: "Uptalent",
-      description:
-        "platform wher u get to shwo yoru talnet , tak wit liek miend people using teh cat fetrue and update to eb a comapny wher u get to erac fo rtalnet  ",
-      tags: ["React", "express"],
-      // caseStudyUrl: "https://lambre.netlify.app/",
-      // sourceUrl: "https://github.com/youssi12/Restaurant",
+      caseStudyUrl: "https://lambre.netlify.app/",
+      sourceUrl: "https://github.com/youssi12/Restaurant",
       visual: "green",
     },
   ],
